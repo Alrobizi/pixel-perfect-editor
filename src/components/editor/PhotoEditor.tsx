@@ -4,6 +4,8 @@ import { ImageCanvas } from "./ImageCanvas";
 import { EditorToolbar } from "./EditorToolbar";
 import { AdjustmentsPanel } from "./AdjustmentsPanel";
 import { FiltersPanel } from "./FiltersPanel";
+import { AdBanner } from "@/components/ads/AdBanner";
+import { AdsProvider } from "@/components/ads/AdsProvider";
 import { toast } from "sonner";
 import { Sparkles } from "lucide-react";
 
@@ -23,7 +25,7 @@ const DEFAULT_ADJUSTMENTS: Adjustments = {
   hue: 0,
 };
 
-export const PhotoEditor = () => {
+const PhotoEditorContent = () => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [adjustments, setAdjustments] = useState<Adjustments>(DEFAULT_ADJUSTMENTS);
   const [activeFilter, setActiveFilter] = useState<string>("none");
@@ -69,6 +71,9 @@ export const PhotoEditor = () => {
   if (!imageUrl) {
     return (
       <div className="min-h-screen bg-background flex flex-col">
+        {/* Banner Ad at Top */}
+        <AdBanner position="top" />
+        
         <header className="p-4 flex items-center justify-center gap-3 border-b border-border/50">
           <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow">
             <Sparkles className="w-5 h-5 text-primary-foreground" />
@@ -82,6 +87,9 @@ export const PhotoEditor = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col" dir="rtl">
+      {/* Banner Ad at Top */}
+      <AdBanner position="top" />
+      
       <header className="p-4 flex items-center gap-3 border-b border-border/50">
         <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow">
           <Sparkles className="w-5 h-5 text-primary-foreground" />
@@ -124,5 +132,17 @@ export const PhotoEditor = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+export const PhotoEditor = () => {
+  return (
+    <AdsProvider
+      showBannerOnMount={true}
+      bannerPosition="top"
+      showRewardedAfterSeconds={15}
+    >
+      <PhotoEditorContent />
+    </AdsProvider>
   );
 };
