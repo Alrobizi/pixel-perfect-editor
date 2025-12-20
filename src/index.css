@@ -38,13 +38,18 @@
 
     --success: 150 70% 45%;
     --warning: 40 90% 55%;
+    
+    --premium: 45 100% 50%;
+    --premium-foreground: 220 20% 10%;
 
     --gradient-primary: linear-gradient(135deg, hsl(185 75% 55%) 0%, hsl(200 80% 50%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(270 60% 60%) 0%, hsl(300 60% 55%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(220 20% 12%) 0%, hsl(220 20% 8%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(45 100% 50%) 0%, hsl(35 100% 55%) 100%);
 
     --shadow-glow: 0 0 30px hsl(185 75% 55% / 0.3);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-premium: 0 0 25px hsl(45 100% 50% / 0.4);
 
     --sidebar-background: 220 18% 12%;
     --sidebar-foreground: 210 20% 90%;
@@ -85,6 +90,10 @@
   .gradient-accent {
     background: var(--gradient-accent);
   }
+  
+  .gradient-premium {
+    background: var(--gradient-premium);
+  }
 
   .shadow-glow {
     box-shadow: var(--shadow-glow);
@@ -92,6 +101,10 @@
 
   .shadow-card {
     box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
   }
 
   .animate-fade-in {
