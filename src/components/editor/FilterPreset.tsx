@@ -6,6 +6,7 @@ interface FilterPresetProps {
   isActive: boolean;
   preview: string;
   onClick: () => void;
+  className?: string;
 }
 
 export const FilterPreset = ({
@@ -14,6 +15,7 @@ export const FilterPreset = ({
   isActive,
   preview,
   onClick,
+  className,
 }: FilterPresetProps) => {
   return (
     <button
@@ -22,7 +24,8 @@ export const FilterPreset = ({
         "flex flex-col items-center gap-2 p-2 rounded-xl transition-all duration-300",
         isActive
           ? "bg-primary/20 ring-2 ring-primary shadow-glow"
-          : "bg-secondary/50 hover:bg-secondary"
+          : "bg-secondary/50 hover:bg-secondary",
+        className
       )}
     >
       <div
