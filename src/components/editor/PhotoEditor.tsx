@@ -108,7 +108,33 @@ export const PhotoEditor = () => {
           </div>
         </header>
 
-        <main className="flex-1 flex items-center justify-center p-4 relative z-10">
+        <main className="flex-1 flex items-center justify-center p-4 relative z-10 overflow-hidden">
+          {/* Animated floating particles */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {/* Large floating orbs */}
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gold/10 blur-2xl animate-float" />
+            <div className="absolute top-1/3 right-1/3 w-24 h-24 rounded-full bg-gold/8 blur-2xl animate-float" style={{ animationDelay: '0.5s' }} />
+            <div className="absolute bottom-1/3 left-1/3 w-28 h-28 rounded-full bg-gold/6 blur-2xl animate-float" style={{ animationDelay: '1s' }} />
+            
+            {/* Small sparkles */}
+            <div className="absolute top-[20%] left-[15%] w-2 h-2 rounded-full bg-gold/60 animate-pulse" style={{ animationDuration: '2s' }} />
+            <div className="absolute top-[30%] right-[20%] w-1.5 h-1.5 rounded-full bg-gold/50 animate-pulse" style={{ animationDuration: '2.5s', animationDelay: '0.3s' }} />
+            <div className="absolute top-[60%] left-[25%] w-2 h-2 rounded-full bg-gold/40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.7s' }} />
+            <div className="absolute top-[70%] right-[30%] w-1 h-1 rounded-full bg-gold/70 animate-pulse" style={{ animationDuration: '2.2s', animationDelay: '1s' }} />
+            <div className="absolute top-[45%] left-[70%] w-1.5 h-1.5 rounded-full bg-gold/50 animate-pulse" style={{ animationDuration: '2.8s', animationDelay: '0.5s' }} />
+            <div className="absolute top-[80%] left-[60%] w-2 h-2 rounded-full bg-gold/30 animate-pulse" style={{ animationDuration: '3.2s', animationDelay: '1.2s' }} />
+            
+            {/* Rotating ring */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none">
+              <div className="absolute inset-0 rounded-full border border-gold/10 animate-spin-slow" />
+              <div className="absolute inset-8 rounded-full border border-dashed border-gold/5 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '12s' }} />
+            </div>
+            
+            {/* Gradient lines */}
+            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-gold/10 to-transparent" />
+            <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-gold/5 to-transparent" />
+          </div>
+          
           <ImageUploader onImageUpload={handleImageUpload} />
         </main>
 
