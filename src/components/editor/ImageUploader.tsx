@@ -46,7 +46,7 @@ export const ImageUploader = ({ onImageUpload }: ImageUploaderProps) => {
       <div
         onDrop={handleDrop}
         onDragOver={handleDragOver}
-        className="relative w-full max-w-md aspect-square rounded-2xl border-2 border-dashed border-primary/40 bg-card/50 backdrop-blur-sm flex flex-col items-center justify-center gap-6 cursor-pointer transition-all duration-300 hover:border-primary hover:shadow-glow group"
+        className="relative w-full max-w-md aspect-square rounded-3xl border-2 border-dashed border-gold/40 bg-card/50 backdrop-blur-sm flex flex-col items-center justify-center gap-6 cursor-pointer transition-all duration-300 hover:border-gold hover:shadow-gold group card-interactive"
       >
         <input
           type="file"
@@ -55,12 +55,12 @@ export const ImageUploader = ({ onImageUpload }: ImageUploaderProps) => {
           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
         />
         
-        <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center shadow-glow transition-transform duration-300 group-hover:scale-110">
-          <Upload className="w-10 h-10 text-primary-foreground" />
+        <div className="w-24 h-24 rounded-full gradient-gold flex items-center justify-center shadow-gold transition-transform duration-300 group-hover:scale-110 animate-glow">
+          <Upload className="w-12 h-12 text-gold-foreground" />
         </div>
         
         <div className="text-center space-y-2">
-          <h3 className="text-xl font-semibold text-foreground">
+          <h3 className="text-xl font-bold text-gold-gradient">
             رفع صورة
           </h3>
           <p className="text-muted-foreground text-sm">
@@ -69,7 +69,7 @@ export const ImageUploader = ({ onImageUpload }: ImageUploaderProps) => {
         </div>
 
         <div className="flex items-center gap-2 text-muted-foreground text-xs">
-          <ImageIcon className="w-4 h-4" />
+          <ImageIcon className="w-4 h-4 text-gold/60" />
           <span>PNG, JPG, WEBP</span>
         </div>
       </div>
