@@ -23,7 +23,7 @@ export const FilterPreset = ({
       className={cn(
         "flex flex-col items-center gap-2 p-2 rounded-xl transition-all duration-300 card-interactive",
         isActive
-          ? "bg-gold/20 ring-2 ring-gold shadow-gold-sm"
+          ? "bg-cyan/20 ring-2 ring-cyan shadow-cyan-sm"
           : "bg-secondary/50 hover:bg-secondary",
         className
       )}
@@ -41,7 +41,7 @@ export const FilterPreset = ({
       <span
         className={cn(
           "text-xs font-medium",
-          isActive ? "text-gold" : "text-muted-foreground"
+          isActive ? "text-cyan" : "text-muted-foreground"
         )}
       >
         {name}

@@ -16,7 +16,7 @@ export const FiltersPanel = ({
   return (
     <div className="space-y-4 animate-fade-in">
       <div className="flex items-center gap-2 mb-4">
-        <Sparkles className="w-4 h-4 text-gold" />
+        <Sparkles className="w-4 h-4 text-cyan" />
         <h3 className="text-sm font-semibold text-foreground">الفلاتر</h3>
       </div>
       
