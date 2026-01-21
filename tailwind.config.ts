@@ -55,12 +55,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
-          muted: "hsl(var(--gold-muted))",
-          foreground: "hsl(var(--gold-foreground))",
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+          light: "hsl(var(--cyan-light))",
+          dark: "hsl(var(--cyan-dark))",
+          muted: "hsl(var(--cyan-muted))",
+          foreground: "hsl(var(--cyan-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -106,17 +106,17 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "pulse-gold": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(42 92% 56% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(42 92% 56% / 0.5)" },
+        "pulse-cyan": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(180 100% 50% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(180 100% 50% / 0.5)" },
         },
         "shimmer": {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
         "glow": {
-          from: { boxShadow: "0 0 20px hsl(42 92% 56% / 0.2), 0 0 40px hsl(42 92% 56% / 0.1)" },
-          to: { boxShadow: "0 0 30px hsl(42 92% 56% / 0.4), 0 0 60px hsl(42 92% 56% / 0.2)" },
+          from: { boxShadow: "0 0 20px hsl(180 100% 50% / 0.2), 0 0 40px hsl(180 100% 50% / 0.1)" },
+          to: { boxShadow: "0 0 30px hsl(180 100% 50% / 0.4), 0 0 60px hsl(180 100% 50% / 0.2)" },
         },
         "spin-slow": {
           from: { transform: "rotate(0deg)" },
@@ -130,7 +130,7 @@ export default {
         "slide-up": "slide-up 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
         "scale-in": "scale-in 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         "float": "float 3s ease-in-out infinite",
-        "pulse-gold": "pulse-gold 2s ease-in-out infinite",
+        "pulse-cyan": "pulse-cyan 2s ease-in-out infinite",
         "shimmer": "shimmer 2s linear infinite",
         "glow": "glow 2s ease-in-out infinite alternate",
         "spin-slow": "spin-slow 8s linear infinite",

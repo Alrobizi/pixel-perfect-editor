@@ -14,12 +14,12 @@ export const AIEnhanceButton = ({ onEnhance, isEnhancing }: AIEnhanceButtonProps
       disabled={isEnhancing}
       className={cn(
         "relative gap-2 px-4 py-2",
-        "gradient-gold text-gold-foreground",
-        "shadow-gold-sm hover:shadow-gold",
+        "gradient-cyan text-cyan-foreground",
+        "shadow-cyan-sm hover:shadow-cyan",
         "transition-all duration-300",
         "hover:scale-105 active:scale-95",
         "disabled:opacity-70 disabled:hover:scale-100",
-        "overflow-hidden btn-gold"
+        "overflow-hidden btn-cyan"
       )}
     >
       {/* Shimmer effect on hover */}
@@ -36,7 +36,7 @@ export const AIEnhanceButton = ({ onEnhance, isEnhancing }: AIEnhanceButtonProps
         <>
           <div className="relative">
             <Wand2 className="w-4 h-4" />
-            <Sparkles className="absolute -top-1 -right-1 w-2 h-2 text-gold-light animate-pulse" />
+            <Sparkles className="absolute -top-1 -right-1 w-2 h-2 text-cyan-light animate-pulse" />
           </div>
           <span className="text-sm font-semibold">تحسين بالذكاء الاصطناعي</span>
         </>

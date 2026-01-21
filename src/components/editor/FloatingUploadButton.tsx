@@ -43,32 +43,32 @@ export const FloatingUploadButton = ({ onImageUpload }: FloatingUploadButtonProp
         className={cn(
           "fixed bottom-6 left-1/2 -translate-x-1/2 z-50",
           "w-16 h-16 rounded-full",
-          "gradient-gold shadow-gold-lg",
+          "gradient-cyan shadow-cyan-lg",
           "flex items-center justify-center",
           "transition-all duration-300 ease-out",
-          "hover:scale-110 hover:shadow-gold-lg",
+          "hover:scale-110 hover:shadow-cyan-lg",
           "active:scale-95",
-          "animate-glow btn-gold",
+          "animate-glow btn-cyan",
           "group"
         )}
         aria-label="رفع صورة جديدة"
       >
         {/* Outer ring animation */}
-        <div className="absolute inset-0 rounded-full border-2 border-gold/30 animate-ping opacity-20" />
+        <div className="absolute inset-0 rounded-full border-2 border-cyan/30 animate-ping opacity-20" />
         
         {/* Icon container with rotation effect */}
         <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:rotate-90">
-          <Plus className="w-7 h-7 text-gold-foreground" strokeWidth={2.5} />
+          <Plus className="w-7 h-7 text-cyan-foreground" strokeWidth={2.5} />
         </div>
         
         {/* Camera icon appears on hover */}
         <Camera 
           className={cn(
-            "absolute w-4 h-4 text-gold-foreground/80",
+            "absolute w-4 h-4 text-cyan-foreground/80",
             "opacity-0 group-hover:opacity-100",
             "transition-all duration-300",
             "-bottom-1 -right-1",
-            "bg-gold-dark rounded-full p-0.5"
+            "bg-cyan-dark rounded-full p-0.5"
           )} 
         />
       </button>
